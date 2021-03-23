@@ -83,6 +83,55 @@ public class Test {
 		c1.getCenter().setX(r1.area()- l1.getStartPoint().getY());
 		System.out.println("X of c1 center: " + c1.getCenter().getX());
 		
+		// Vezbe 4.
+		System.out.println("Vezbe 4");
+		
+		Point p2 = new Point(50,100);
+		System.out.println("Point p2: X:" + p2.getX() + ", Y: " + p2.getY() + ", selected: " + 
+						p2.isSelected());
+		
+		Line l2 = new Line(p2,new Point(400,500));
+		Rectangle r2 = new Rectangle(p1,50,80);
+		Rectangle r3 = new Rectangle(p1,40,80,false); 
+		Circle c2 = new Circle(new Point(300,300), 60);
+		
+		// Ispis pre redifinisanja metode toString() : <naziv_paketa>.<naziv_klase>@<HexOfHash>
+		
+		System.out.println(p2);  // (x,y)
+		System.out.println(p2.toString());
+		System.out.println(l2);
+		System.out.println(r2);
+		System.out.println(c2);
+		
+		int a = 5;
+		int b = 5;
+		System.out.println(a == b); //poredjenje po vrednosti
+		
+		String s1 = new String("Hello World!");
+		String s2 = new String("Hello World!");
+		System.out.println(s1 == s2); //poredjenje po referenci
+		
+		String s3 = "abc";
+		String s4 = "abc";
+		System.out.println(s3 == s4);
+		
+		System.out.println(s1.equals(s2)); // poredjenje po vrednosti
+		
+		System.out.println(p2 instanceof Point);
+		System.out.println(p2 instanceof Object);
+		
+		System.out.println("Point p1: " + p1);
+		System.out.println("Point p2: " + p2);
+		System.out.println(p2.equals(p1));
+		System.out.println(p2.equals(c2));
+		
+		System.out.println("Rectangle r2: " + r2);
+		System.out.println("Rectangle r3: " + r3);
+		System.out.println(r2.equals(r3));
+		r3.setWidth(50);
+		System.out.println("Rectangle r2: " + r2);
+		System.out.println("Rectangle r3: " + r3);
+		System.out.println(r2.equals(r3));
 		
 	}
 
