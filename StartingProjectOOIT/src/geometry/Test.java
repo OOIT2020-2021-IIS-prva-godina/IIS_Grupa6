@@ -137,7 +137,7 @@ public class Test {
 		Point p3 = new Point(40,40);
 		Rectangle r4 = new Rectangle(new Point(30,30),40,20);
 		
-		System.out.println(r4.contains(p3)); //true
+		System.out.println(r4.contains(p3)); 	//true
 		System.out.println(r4.contains(50,20));  //false
 		System.out.println(r4.contains(10,40));   //false
 		
