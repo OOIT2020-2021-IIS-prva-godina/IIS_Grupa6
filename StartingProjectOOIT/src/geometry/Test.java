@@ -133,6 +133,18 @@ public class Test {
 		System.out.println("Rectangle r3: " + r3);
 		System.out.println(r2.equals(r3));
 		
+		System.out.println("\nVezbe 5\n");
+		Point p3 = new Point(40,40);
+		Rectangle r4 = new Rectangle(new Point(30,30),40,20);
+		
+		System.out.println(r4.contains(p3)); //true
+		System.out.println(r4.contains(50,20));  //false
+		System.out.println(r4.contains(10,40));   //false
+		
+		Donut d1 = new Donut(p3,50,20);
+		System.out.println(d1.contains(p3));
+		System.out.println(d1.contains(40,65));
+		System.out.println(d1.contains(40,15));
 	}
 
 }

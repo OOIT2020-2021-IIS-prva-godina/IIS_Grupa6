@@ -5,6 +5,7 @@ public class Circle {
 	private Point center;
 	private int radius;
 	private boolean selected;
+	// protected boolean selected;
 	
 	public Circle() {
 		
@@ -20,7 +21,13 @@ public class Circle {
 		this.selected = selected;
 	}
 	
-	
+	public boolean contains(int x, int y) {
+		return center.distance(x,y) <= radius;
+	}
+	//overloading
+	public boolean contains(Point p) {
+		return this.contains(p.getX(), p.getY());
+	}
 	//Metode za izračunavanje površine i obima kruga:
 	
 	public double area() {

@@ -22,7 +22,9 @@ public class Point {
 				   // mora biti prva linija ove metode!
 		this.selected = selected;
 	}
-	
+	public boolean contains(int x, int y) {
+		return this.distance(x, y) <= 2;
+	}
 	public double distance(int x2,int y2) {
 		double dx = this.x - x2;
 		double dy = this.y - y2;

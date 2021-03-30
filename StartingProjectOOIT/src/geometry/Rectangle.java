@@ -20,6 +20,13 @@ public class Rectangle {
 		this.selected = selected;
 	}
 	
+	public boolean contains(int x, int y) {
+		return (upperLeftPoint.getX() <= x && (upperLeftPoint.getX() + width) >= x
+				&& upperLeftPoint.getY() <= y && (upperLeftPoint.getY() + height) >= y);
+	}
+	public boolean contains(Point p) {
+		return this.contains(p.getX(), p.getY());
+	}
 	//Metode za izračunavanje površine i obima:
 	
 	public int area() {

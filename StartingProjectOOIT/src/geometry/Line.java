@@ -23,7 +23,9 @@ public class Line {
 	public double length() {
 		return startPoint.distance(endPoint.getX(), endPoint.getY());
 	}
-	
+	public boolean contains(int x,int y) {
+		return startPoint.distance(x, y) + endPoint.distance(x, y) - length() <=2;
+	}
 	public boolean equals(Object obj) {
 		if(obj instanceof Line) {
 			Line pomocna = (Line)obj;
