@@ -1,10 +1,12 @@
 package geometry;
 
-public class Point {
+import java.awt.Graphics;
+
+public class Point extends Shape{
 
 	private int x;
 	private int y;
-	private boolean selected;
+
 	
 	public Point() {
 		
@@ -56,15 +58,16 @@ public class Point {
 	public void setY(int y) {
 		this.y = y;
 	}
-	public boolean isSelected() {
-		return this.selected ;
-		//ili: return selected;
-	}
-	public void setSelected(boolean selected) {
-		this.selected = selected;
-	}
 	
 	public String toString() {
 		return "("+x+","+y+")";    // (x,y)
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		//Tacku predstavljamo simbolom +, odnosno iscrtavamo 2 linije
+		g.drawLine(x-2, y, x+2, y); //horizontalna
+		g.drawLine(x, y+2, x, y-2); //vertikalna
+		
 	}
 }

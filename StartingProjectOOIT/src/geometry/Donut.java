@@ -1,5 +1,7 @@
 package geometry;
 
+import java.awt.Graphics;
+
 public class Donut extends Circle{
 	// Prosiruje klasu Circle i time nasleđuje sva obeležja i 
 	// metode klase Circle, koji nisu deklarisani kao private.
@@ -62,6 +64,12 @@ public class Donut extends Circle{
 
 	public void setInnerRadius(int innerRadius) {
 		this.innerRadius = innerRadius;
+	}
+	@Override
+	public void draw(Graphics g) {
+		super.draw(g); //Poziv metode draw() implementirane u klasi Circle. Iscrtava se spoljasnji krug
+		//Unutrasnji krug:
+		g.drawOval(getCenter().getX() - innerRadius,getCenter().getY() - innerRadius, 2*innerRadius, 2*innerRadius);
 	}
 	
 	
