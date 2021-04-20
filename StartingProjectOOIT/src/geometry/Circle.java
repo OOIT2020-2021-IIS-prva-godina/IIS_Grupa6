@@ -71,4 +71,23 @@ public class Circle extends Shape {
 	public void draw(Graphics g) {
 		g.drawOval(center.getX()-radius,center.getY() - radius, 2*radius, 2*radius);
 	}
+
+	@Override
+	public void moveTo(int x, int y) {
+		center.moveTo(x, y);
+		
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		center.moveBy(byX, byY);
+		
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		if(o instanceof Circle)
+			return (int) (this.area() - ((Circle)o).area());
+		return 0;
+	}
 }
