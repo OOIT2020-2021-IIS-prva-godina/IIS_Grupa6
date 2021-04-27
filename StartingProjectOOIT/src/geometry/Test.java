@@ -308,6 +308,15 @@ public class Test {
 			System.out.println(donuts[i]);
 		}
 		
+		//Vezbe 8 - Zadatak 3
+		System.out.println("Circle c1:  " + c1);
+		try {
+			c1.setRadius(-10);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		System.out.println("Circle c1 (after setRadius()):  " + c1);
+		
 	}
 
 }
